@@ -4,7 +4,7 @@ output: github_document
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/wikisourcer)](https://CRAN.R-project.org/package=wikisourcer)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/wikisourcer?color=green)](https://cran.r-project.org/package=wikisourcer)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/wikisourcer)](https://cran.r-project.org/package=wikisourcer)
 <!-- badges: end -->
 
 # wikisourcer <img src="man/figures/logo.png" align="right" />
@@ -19,29 +19,35 @@ It includes two functions for downloading books and pages by url.
 ### Installation
 
 ```{r eval=FALSE}
-install.packages("wikisourcer") # or devtools::install_github("lgnbhl/wikisourcer")
+install.packages("wikisourcer")
+```
+
+```{r eval=FALSE}
+# install dev version from github
+if (!require(devtools)) install.packages("devtools")
+devtools::install_github("lgnbhl/wikisourcer")
 ```
 
 ### Minimal examples
 
-Download Voltaire's philosophical novel *Candide*.
+Download Voltaire's philosophical full novel *Candide* with `wikisource_book`.
 
-```{r eval=FALSE}
+```{r}
 library(wikisourcer)
 
 wikisource_book(url = "https://en.wikisource.org/wiki/Candide")
 ```
 
-Download Chapter 1 of *Candide*.
+Download only the 1st chapter of *Candide* with `wikisource_page`.
 
-```{r eval=FALSE}
+```{r}
 wikisource_page("https://en.wikisource.org/wiki/Candide/Chapter_1", 
                 page = "Chapter 1")
 ```
 
-Download *Candide* in French, Spanish and Italian.
+Download *Candide* in French, Spanish and Italian, with the help of {purrr}.
 
-```{r eval=FALSE}
+```{r}
 library(purrr)
 
 fr <- "https://fr.wikisource.org/wiki/Candide,_ou_l%E2%80%99Optimisme/Garnier_1877"

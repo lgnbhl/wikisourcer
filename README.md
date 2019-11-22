@@ -1,14 +1,9 @@
-<!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/wikisourcer)](https://CRAN.R-project.org/package=wikisourcer)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/wikisourcer?color=green)](https://cran.r-project.org/package=wikisourcer)
-<!-- badges: end -->
-
 
 <!-- badges: start -->
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/wikisourcer)](https://CRAN.R-project.org/package=wikisourcer)
-[![](https://cranlogs.r-pkg.org/badges/grand-total/polyglot)](https://cran.r-project.org/package=wikisourcer)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/wikisourcer)](https://cran.r-project.org/package=wikisourcer)
 <!-- badges: end -->
 
 # wikisourcer <img src="man/figures/logo.png" align="right" />
@@ -19,18 +14,24 @@ from the free library [Wikisource](https://wikisource.org/).
 It includes two functions for downloading books and pages by url.
 
   - `wikisource_book()` to download a book.
-  - `wikisource_page()` to download a
-page.
+  - `wikisource_page()` to download a page.
 
 ### Installation
 
 ``` r
-install.packages("wikisourcer") # or devtools::install_github("lgnbhl/wikisourcer")
+install.packages("wikisourcer")
+```
+
+``` r
+# install dev version from github
+if (!require(devtools)) install.packages("devtools")
+devtools::install_github("lgnbhl/wikisourcer")
 ```
 
 ### Minimal examples
 
-Download Voltaire’s philosophical novel *Candide*.
+Download Voltaire’s philosophical full novel *Candide* with
+`wikisource_book`.
 
 ``` r
 library(wikisourcer)
@@ -38,14 +39,48 @@ library(wikisourcer)
 wikisource_book(url = "https://en.wikisource.org/wiki/Candide")
 ```
 
-Download Chapter 1 of *Candide*.
+    ## # A tibble: 864 x 5
+    ##    text                               page language url                    title
+    ##    <chr>                             <int> <chr>    <chr>                  <chr>
+    ##  1 ""                                    1 en       https://en.wikisource… Cand…
+    ##  2 In the country of Westphalia, in…     1 en       https://en.wikisource… Cand…
+    ##  3 "The Baron was one of the most p…     1 en       https://en.wikisource… Cand…
+    ##  4 My Lady Baroness, who weighed th…     1 en       https://en.wikisource… Cand…
+    ##  5 Master Pangloss taught the metap…     1 en       https://en.wikisource… Cand…
+    ##  6 "\"It is demonstrable,\" said he…     1 en       https://en.wikisource… Cand…
+    ##  7 Candide listened attentively and…     1 en       https://en.wikisource… Cand…
+    ##  8 One day when Miss Cunegund went …     1 en       https://en.wikisource… Cand…
+    ##  9 On her way back she happened to …     1 en       https://en.wikisource… Cand…
+    ## 10 ""                                    1 en       https://en.wikisource… Cand…
+    ## # … with 854 more rows
+
+Download only the 1st chapter of *Candide* with `wikisource_page`.
 
 ``` r
 wikisource_page("https://en.wikisource.org/wiki/Candide/Chapter_1", 
                 page = "Chapter 1")
 ```
 
-Download *Candide* in French, Spanish and Italian.
+    ## # A tibble: 14 x 4
+    ##    text                                 page    language url                    
+    ##    <chr>                                <chr>   <chr>    <chr>                  
+    ##  1 ""                                   Chapte… en       https://en.wikisource.…
+    ##  2 In the country of Westphalia, in th… Chapte… en       https://en.wikisource.…
+    ##  3 "The Baron was one of the most powe… Chapte… en       https://en.wikisource.…
+    ##  4 My Lady Baroness, who weighed three… Chapte… en       https://en.wikisource.…
+    ##  5 Master Pangloss taught the metaphys… Chapte… en       https://en.wikisource.…
+    ##  6 "\"It is demonstrable,\" said he, \… Chapte… en       https://en.wikisource.…
+    ##  7 Candide listened attentively and be… Chapte… en       https://en.wikisource.…
+    ##  8 One day when Miss Cunegund went to … Chapte… en       https://en.wikisource.…
+    ##  9 On her way back she happened to mee… Chapte… en       https://en.wikisource.…
+    ## 10 ""                                   Chapte… en       https://en.wikisource.…
+    ## 11 ""                                   Chapte… en       https://en.wikisource.…
+    ## 12 ""                                   Chapte… en       https://en.wikisource.…
+    ## 13 ""                                   Chapte… en       https://en.wikisource.…
+    ## 14 ""                                   Chapte… en       https://en.wikisource.…
+
+Download *Candide* in French, Spanish and Italian, with the help of
+{purrr}.
 
 ``` r
 library(purrr)
@@ -56,6 +91,21 @@ it <- "https://it.wikisource.org/wiki/Candido"
 
 purrr::map_df(c(fr, es, it), wikisource_book)
 ```
+
+    ## # A tibble: 2,372 x 5
+    ##    text                      page language url                      title       
+    ##    <chr>                    <int> <chr>    <chr>                    <chr>       
+    ##  1 ""                           1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  2 ""                           1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  3 ""                           1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  4 ""                           1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  5 CHAPITRE I. comment can…     1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  6 "Il y avait en Vestphal…     1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  7 Monsieur le baron était…     1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  8 Madame la baronne, qui …     1 fr       https://fr.wikisource.o… Candide, ou…
+    ##  9 Pangloss enseignait la …     1 fr       https://fr.wikisource.o… Candide, ou…
+    ## 10 « Il est démontré, disa…     1 fr       https://fr.wikisource.o… Candide, ou…
+    ## # … with 2,362 more rows
 
 For more information on how to use **wikisourcer**, please read [the
 vignette](https://felixluginbuhl.com/wikisourcer/articles/wikisourcer.html).
