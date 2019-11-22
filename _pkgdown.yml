@@ -1,0 +1,29 @@
+template:
+  params:
+    bootswatch: cerulean
+
+navbar:
+  left:
+  - text: Home
+    href: index.html
+  - text: Get started
+    href: articles/wikisourcer.html
+  - text: Reference
+    href: reference/index.html
+  - text: Changelog
+    href: news/index.html
+  right:
+   - icon: fa-linkedin
+     href: https://www.linkedin.com/in/felixluginbuhl
+   - icon: fa-twitter
+     href: https://twitter.com/felixluginbuhl
+   - icon: fa-github
+     href: https://github.com/lgnbhl/wikisourcer
+   - icon: fa-home
+     href: http://felixluginbuhl.com
+
+reference:
+  - title: "Functions"
+    contents: 
+      - wikisource_book
+      - wikisource_page
