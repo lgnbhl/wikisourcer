@@ -4,4 +4,3 @@
 ^docs$
 README.Rmd
 _pkgdown.yml
-^\.travis\.yml$
