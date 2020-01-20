@@ -5,7 +5,7 @@ Version: 0.1.4
 Authors@R: person("Félix", "Luginbuhl", email = "felix.luginbuhl@protonmail.ch", role = c("aut", "cre"))
 Maintainer: Félix Luginbuhl <felix.luginbuhl@protonmail.ch>
 Description: Download public domain works from Wikisource <https://wikisource.org/>, a free library from the Wikimedia Foundation project.
-License: MIT + file LICENSE
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 2.10)
