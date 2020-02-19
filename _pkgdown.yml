@@ -1,6 +1,7 @@
 template:
   params:
-    bootswatch: cerulean
+    bootswatch: cosmo
+    ganalytics: UA-158089797-1
 
 navbar:
   left:

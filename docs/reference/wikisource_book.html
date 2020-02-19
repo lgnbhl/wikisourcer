@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -39,15 +41,15 @@
 
 
 
-<meta property="og:title" content="Download a book from Wikisource — wikisource_book" />
 
+<meta property="og:title" content="Download a book from Wikisource — wikisource_book" />
 <meta property="og:description" content="Download a book using the url of a Wikisource content page into a
 data frame. The Wikisource table of content page should link to all the
 Wikisource pages constituting the book. The text in the Wikisource
 pages is downloaded using the wikisource_page() function." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 
 
@@ -60,6 +62,16 @@ pages is downloaded using the wikisource_page() function." />
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158089797-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158089797-1');
+</script>
 
 
   </head>
@@ -97,7 +109,6 @@ pages is downloaded using the wikisource_page() function." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://www.linkedin.com/in/felixluginbuhl">
@@ -142,16 +153,14 @@ pages is downloaded using the wikisource_page() function." />
     </div>
 
     <div class="ref-description">
-    
     <p>Download a book using the url of a Wikisource content page into a
 data frame. The Wikisource table of content page should link to all the
 Wikisource pages constituting the book. The text in the Wikisource
 pages is downloaded using the <code><a href='wikisource_page.html'>wikisource_page()</a></code> function.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>wikisource_book</span>(<span class='no'>url</span>, <span class='kw'>cleaned</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -165,7 +174,7 @@ constituting the book.</p></td>
       <td><p>A boolean variable for cleaning Wikisource pages.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A five column tbl_df (a type of data frame; see tibble or
@@ -184,12 +193,10 @@ with columns.</p>
 
 </dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The download could fail if the Wikisource paths listed
 into content page strongly differ from the url path of the content page.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
@@ -210,11 +217,8 @@ into content page strongly differ from the url path of the content page.</p>
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
