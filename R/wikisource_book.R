@@ -59,6 +59,11 @@
 #' @export
 
 wikisource_book <- function(url, cleaned = TRUE) {
+  # gracefully fail is issue with Internet ressources
+  if(is.null(gracefully_fail(url))) {
+    return(invisible(NULL))
+  }
+  
   # READING URL
   wiki_paths <- url %>%
     xml2::read_html() %>%

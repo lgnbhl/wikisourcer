@@ -2,6 +2,8 @@
 output: github_document
 ---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/wikisourcer)](https://CRAN.R-project.org/package=wikisourcer)
 [![Grand total](http://cranlogs.r-pkg.org/badges/grand-total/wikisourcer)](https://cran.r-project.org/package=wikisourcer)
@@ -10,7 +12,9 @@ output: github_document
 
 # wikisourcer <img src="man/figures/logo.png" align="right" />
 
-The **wikisourcer** R package helps you download public domain works from the free library [Wikisource](https://wikisource.org/). 
+> Download public domain works from Wikisource
+
+The package `wikisourcer` helps you download public domain works from the free library [Wikisource](https://wikisource.org/). 
 
 It includes two functions for downloading books and pages by url. 
 

@@ -48,7 +48,11 @@
 #' @export
 
 wikisource_page <- function(wikiurl, page = NA, cleaned = TRUE) {
-
+  # gracefully fail is issue with Internet ressources
+  if(is.null(gracefully_fail(wikiurl))) {
+    return(invisible(NULL))
+  }
+  
   # READING WIKIPAGE FROM WIKISOURCE
   wikipage <- wikiurl %>%
     xml2::read_html() %>%

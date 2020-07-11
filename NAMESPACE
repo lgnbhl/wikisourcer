@@ -2,6 +2,11 @@
 
 export(wikisource_book)
 export(wikisource_page)
+importFrom(curl,has_internet)
+importFrom(httr,GET)
+importFrom(httr,http_error)
+importFrom(httr,message_for_status)
+importFrom(httr,timeout)
 importFrom(magrittr,"%>%")
 importFrom(purrr,keep)
 importFrom(purrr,pmap_df)

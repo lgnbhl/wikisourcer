@@ -1,4 +1,6 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <!-- badges: start -->
 
 [![CRAN
@@ -11,8 +13,10 @@ status](https://gitlab.com/lgnbhl/wikisourcer/badges/master/pipeline.svg)](https
 
 # wikisourcer <img src="man/figures/logo.png" align="right" />
 
-The **wikisourcer** R package helps you download public domain works
-from the free library [Wikisource](https://wikisource.org/).
+> Download public domain works from Wikisource
+
+The package `wikisourcer` helps you download public domain works from
+the free library [Wikisource](https://wikisource.org/).
 
 It includes two functions for downloading books and pages by url.
 
