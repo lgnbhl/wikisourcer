@@ -1,6 +1,7 @@
-pandoc: 2.3.1
-pkgdown: 1.4.1
+pandoc: 2.9.2.1
+pkgdown: 1.5.1
 pkgdown_sha: ~
 articles:
   wikisourcer: wikisourcer.html
+last_built: 2020-07-11T11:15Z
 
