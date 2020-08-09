@@ -12,7 +12,7 @@ vignette: >
 knitr::opts_chunk$set(fig.width = 7, fig.height = 4, fig.align = "center") 
 ```
 
-The digital library [Wikisource](https://wikisource.org/), a sister projet of *Wikipedia*, hosts books in the public domain in almost all languages. More than 100'000 books are accessible in English, Spanish, French, German, Russian or Chinese.
+The digital library [Wikisource](https://wikisource.org/), a sister project of *Wikipedia*, hosts books in the public domain in almost all languages. More than 100'000 books are accessible in English, Spanish, French, German, Russian or Chinese.
 
 The **wikisourcer** R package helps you download any book or page from Wikisource. The text is downloaded in a tidy dataframe, so it can be analyzed within the tidyverse ecosystem as explained for example in the book *[Text mining with R](https://www.tidytextmining.com)*.
 
@@ -26,7 +26,7 @@ library(wikisourcer)
 wikisource_book(url = "https://en.wikisource.org/wiki/Candide")
 ```
 
-Multiple books can easily be downoaded using the ```purrr``` package. For example, we can download *Candide* in French, English, Spanish and Italian.
+Multiple books can easily be downloaded using the ```purrr``` package. For example, we can download *Candide* in French, English, Spanish and Italian.
 
 ```{r message=FALSE, warning=FALSE}
 library(purrr)

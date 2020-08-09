@@ -2,5 +2,5 @@ image: rocker/verse
 
 test:
    script:
-    - R -e 'install.packages(c("urltools", "tidytext", "widyr", "SnowballC", "ggraph", "igraph"))'
+    - R -e 'install.packages(c("urltools", "tidytext", "stopwords", "widyr", "SnowballC", "ggraph", "igraph"))'
     - R -e 'devtools::check()'

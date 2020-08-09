@@ -21,8 +21,7 @@ the free library [Wikisource](https://wikisource.org/).
 It includes two functions for downloading books and pages by url.
 
   - `wikisource_book()` to download a book.
-  - `wikisource_page()` to download a
-page.
+  - `wikisource_page()` to download a page.
 
 ### Installation
 
