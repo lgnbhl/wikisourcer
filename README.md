@@ -9,6 +9,8 @@ status](https://www.r-pkg.org/badges/version/wikisourcer)](https://CRAN.R-projec
 total](http://cranlogs.r-pkg.org/badges/grand-total/wikisourcer)](https://cran.r-project.org/package=wikisourcer)
 [![pipeline
 status](https://gitlab.com/lgnbhl/wikisourcer/badges/master/pipeline.svg)](https://gitlab.com/lgnbhl/wikisourcer/pipelines)
+[![R build
+status](https://github.com/lgnbhl/wikisourcer/workflows/R-CMD-check/badge.svg)](https://github.com/lgnbhl/wikisourcer/actions)
 <!-- badges: end -->
 
 # wikisourcer <img src="man/figures/logo.png" align="right" />
