@@ -6,7 +6,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/wikisourcer)](https://CRAN.R-project.org/package=wikisourcer)
 [![Grand
-total](http://cranlogs.r-pkg.org/badges/grand-total/wikisourcer)](https://cran.r-project.org/package=wikisourcer)
+total](https://cranlogs.r-pkg.org/badges/grand-total/wikisourcer)](https://cran.r-project.org/package=wikisourcer)
 [![pipeline
 status](https://gitlab.com/lgnbhl/wikisourcer/badges/master/pipeline.svg)](https://gitlab.com/lgnbhl/wikisourcer/pipelines)
 [![R build
